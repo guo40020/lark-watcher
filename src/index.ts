@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer-core';
 import ws from 'ws';
 import fs from 'fs';
 
-const injectScriptContent = fs.readFileSync('./src/inject/index.js').toString();
+const injectScriptContent = fs.readFileSync('./dist/inject/index.js').toString();
 const clientWs: ws.WebSocket[] = [];
 
 const clientServer = new ws.WebSocketServer({ host: '127.0.0.1', port: 9871 });
